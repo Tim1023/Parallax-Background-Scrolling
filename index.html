@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Parallax Background</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script type="text/javascript">
+    const onScroll = ()=>{
+      const scrollPosition =  (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+      Array.from((document.getElementsByClassName('banner')))
+        .forEach(el => el.style.backgroundPositionX = -scrollPosition + 'px')
+    }
+  </script>
+</head>
+
+<body onscroll="onScroll()">
+<section class="banner"></section>
+<h1>Random Joke</h1>
+<section class="banner h-75"></section>
+<p>What is the difference between a snowman and a snowwoman?</p>
+<section class="banner h-50"></section>
+<p>Snowballs</p>
+<section class="banner h-50"></section>
+<p>Funniest jokes of all times</p>
+<section class="banner h-50"></section>
+</body>
+
+</html>
